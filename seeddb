@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#/opt/couchbase/bin/couchbase-cli bucket-create -c localhost:8091 -u Administrator -p password --bucket=archangel --bucket-type=couchbase --bucket-ramsize=200
+#/opt/couchbase/bin/cbimport csv -c localhost -u Administrator -p password -b archangel -d file://mock_data.csv --generate-key key::%car_model%
+#/opt/couchbase/bin/cbq --script="CREATE INDEX indx_acm ON archangel(car_model) USING VIEW;"
+#/opt/couchbase/bin/cbq -c localhost -u Administrator -p password --script="CREATE INDEX indx_acm ON archangel(car_model) USING VIEW;"
+/opt/couchbase/bin/cbq -c localhost --script="CREATE INDEX indx_acm ON archangel(car_model) USING VIEW;"
+exit 1

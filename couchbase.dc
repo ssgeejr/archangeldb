@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+    couchbase:
+        image: 'couchbase/server-sandbox:5.5.0'
+        container_name: db
+        labels:
+            maintainer: 'Steve S Gee Jr <ioexcept@gmail.com>'
+        ports:
+            - '8091-8094:8091-8094'
+            - '11210:11210'
+        volumes:
+            - 'couchbase-vol:/opt/couchbase/var'
+        tty: true
+        stdin_open: true
+        restart: always
+volumes:
+    couchbase-vol:
