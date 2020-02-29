@@ -1,4 +1,4 @@
-FROM mongo:latest
+FROM mongo:4.0.2
 
 LABEL maintainer="ioexcept@gmail.com"
 LABEL version="1.1"
